@@ -8,31 +8,31 @@ geometry: bin/geometry
 test:bin/test
 
 obj/test/main.o:test/main.cpp
-	g++ -c $(CCFLAGS) -o $@ $< -lm
+	g++ -c $(CCFLAGS) -o $@ $< 
 
 obj/test/tests.o:test/tests.cpp
-	g++ -c $(CCFLAGS) -o $@ $< -lm
+	g++ -c $(CCFLAGS) -o $@ $< 
 
 bin/test: obj/test/main.o obj/test/tests.o obj/test/Check.o obj/test/SP.o
 	g++ $(LDFLAGS) obj/test/main.o obj/test/tests.o obj/test/Check.o obj/test/SP.o -o bin/test -lm
 
 obj/test/Check.o: src/statlib/Check.cpp
-	 g++ -c -I src $(CFLAGS) -o $@ $< -lm
+	 g++ -c -I src $(CFLAGS) -o $@ $< 
 obj/test/SP.o: src/statlib/SP.cpp
-	 g++ -c -I src $(CFLAGS) -o $@ $< -lm
+	 g++ -c -I src $(CFLAGS) -o $@ $< 
 
 bin/geometry: obj/src/geometry/main.o obj/src/statlib/statlib.a
-	                $(CC) $(CFLAGS) -o $@ $^ -lm
+	                $(CC) $(CFLAGS) -o $@ $^ 
 obj/src/geometry/main.o: src/geometry/main.cpp
-	                $(CC) -c -I src $(CFLAGS) -o $@ $< -lm
+	                $(CC) -c -I src $(CFLAGS) -o $@ $< 
 obj/src/statlib/statlib.a: obj/src/statlib/Check.o obj/src/statlib/otobraj.o obj/src/statlib/SP.o
 	                ar rcs $@ $^
 obj/src/statlib/Check.o: src/statlib/Check.cpp
-	                $(CC) -c -I src $(CFLAGS) -o $@ $< -lm
+	                $(CC) -c -I src $(CFLAGS) -o $@ $< 
 obj/src/statlib/otobraj.o: src/statlib/otobraj.cpp
-	                $(CC) -c -I src $(CFLAGS) -o $@ $< -lm
+	                $(CC) -c -I src $(CFLAGS) -o $@ $< 
 obj/src/statlib/SP.o: src/statlib/SP.cpp
-	                $(CC) -c -I src $(CFLAGS) -o $@ $< -lm
+	                $(CC) -c -I src $(CFLAGS) -o $@ $< 
 
 .PHONY: clean
 
