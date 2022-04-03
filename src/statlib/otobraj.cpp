@@ -3,7 +3,8 @@
 #include"Check.h"
 #include"otobraj.h"
 using namespace std;
-int otobraj(){
+int otobraj()
+{
     int x1,y1,r1,x2,y2,r2;
     cout<<" x1: ";cin>>x1;
     cout<<" y1: ";cin>>y1;
