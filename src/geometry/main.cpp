@@ -1,5 +1,5 @@
 #include "statlib/otobraj.h"
-#include<iostream>
+#include <iostream>
 int main()
 {
     otobraj();
