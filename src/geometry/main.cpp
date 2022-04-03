@@ -1,7 +1,6 @@
 #include "statlib/otobraj.h"
 #include <iostream>
-int main()
-{
-    otobraj();
-    return 0;
+int main() {
+  otobraj();
+  return 0;
 }

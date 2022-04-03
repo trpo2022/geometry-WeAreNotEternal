@@ -1,2 +1,2 @@
 #pragma once
-int circle(int x,int y,int r);
+int circle(int x, int y, int r);
