@@ -45,3 +45,11 @@ CTEST(Test_s, test4) {
   int res = circle(x1, y1, r1);
   ASSERT_EQUAL(expected, res);
 }
+CTEST(Test_s, test5) {
+  int x1 = 10;
+  int y1 = 5;
+  int r1 = 7;
+  const int expected = 147;
+  int res = circle(x1, y1, r1);
+  ASSERT_EQUAL(expected, res);
+}
